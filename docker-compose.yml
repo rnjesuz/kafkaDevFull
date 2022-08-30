@@ -1,0 +1,16 @@
+version: '3'
+services:
+  kafka:
+    image: landoop/fast-data-dev:latest
+    ports:
+      - "9092:9092"
+      - "18081:8081"
+      - "18082:8082"
+      - "18083:8083"
+      - "2181:2181"
+      - "3030:3030"
+      - "9581-9585:9581-9585"
+    environment:
+      - ADV_HOST=localhost
+      - KAFKA_MESSAGE_MAX_BYTES=2097152
+      - KAFKA_REPLICA_FETCH_MAX_BYTES=2097152
